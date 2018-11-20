@@ -1,0 +1,45 @@
+group = 'cn.net.jalo'
+
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.RELEASE'
+	}
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+allprojects {
+	version = '0.1.0-SNAPSHOT'
+}
+
+subprojects {
+	apply plugin: 'eclipse'
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'maven'
+	apply plugin: 'org.springframework.boot'
+
+	sourceCompatibility = 1.8
+
+	repositories {
+		jcenter()
+		mavenCentral()
+		maven { url "https://repo.spring.io/milestone" }
+	}
+
+	ext {
+		springCloudVersion = 'Greenwich.M3'
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		}
+	}
+}
