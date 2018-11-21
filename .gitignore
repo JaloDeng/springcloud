@@ -4,6 +4,7 @@
 
 ### Eclipse ###
 bin
+build
 
 ### STS ###
 .apt_generated
