@@ -7,7 +7,7 @@ create table `product_category` (
     `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     primary key (`category_id`),
     unique key `uqe_category_type` (`category_type`)
-);
+) comment '类目表';
 INSERT INTO `product_category` (`category_id`, `category_name`, `category_type`, `create_time`, `update_time`)
 VALUES
 	(1,'热榜',11,'2017-03-28 16:40:22','2017-11-26 23:39:36'),
@@ -26,7 +26,7 @@ create table `product_info` (
     `create_time` timestamp not null default current_timestamp comment '创建时间',
     `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     primary key (`product_id`)
-);
+) comment '商品表';
 INSERT INTO `product_info` (`product_id`, `product_name`, `product_price`, `product_stock`, `product_description`, `product_icon`, `product_status`, `category_type`, `create_time`, `update_time`)
 VALUES
 	('157875196366160022','皮蛋粥',0.01,39,'好吃的皮蛋粥','//fuss10.elemecdn.com/0/49/65d10ef215d3c770ebb2b5ea962a7jpeg.jpeg',0,1,'2017-03-28 19:39:15','2017-07-02 11:45:44'),
@@ -47,7 +47,7 @@ create table `order_master` (
     `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     primary key (`order_id`),
     key `idx_buyer_openid` (`buyer_openid`)
-);
+) comment '订单表';
 
 -- 订单商品
 create table `order_detail` (
@@ -62,7 +62,7 @@ create table `order_detail` (
     `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     primary key (`detail_id`),
     key `idx_order_id` (`order_id`)
-);
+) comment '订单详情表';
 
 -- 用户
 CREATE TABLE `user_info` (

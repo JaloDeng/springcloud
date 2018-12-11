@@ -1,0 +1,11 @@
+group = 'cn.net.jalo.springcloud.wechat'
+
+dependencies {
+	compile('mysql:mysql-connector-java')
+
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+
+	implementation('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
