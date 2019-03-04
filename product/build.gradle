@@ -3,6 +3,8 @@ group = 'cn.net.jalo.springcloud.wechat'
 dependencies {
 	compile('mysql:mysql-connector-java')
 
+	compile('org.projectlombok:lombok')
+
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
 
