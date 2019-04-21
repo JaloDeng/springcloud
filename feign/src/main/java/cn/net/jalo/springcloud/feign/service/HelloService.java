@@ -4,7 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient("client")
+import cn.net.jalo.springcloud.feign.service.impl.HelloServiceHystrixImpl;
+
+@FeignClient(value = "client", fallback = HelloServiceHystrixImpl.class)
 public interface HelloService {
 
 	@GetMapping("/client/{name}")
