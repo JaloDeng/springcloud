@@ -1,4 +1,4 @@
-package cn.net.jalo.springcloud.eureka.ribbon;
+package cn.net.jalo.springcloud.ribbon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

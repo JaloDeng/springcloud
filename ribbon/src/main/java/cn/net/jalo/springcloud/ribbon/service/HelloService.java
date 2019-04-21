@@ -1,4 +1,4 @@
-package cn.net.jalo.springcloud.eureka.ribbon.service;
+package cn.net.jalo.springcloud.ribbon.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

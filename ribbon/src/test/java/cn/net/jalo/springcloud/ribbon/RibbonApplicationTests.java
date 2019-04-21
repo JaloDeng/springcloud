@@ -1,4 +1,4 @@
-package cn.net.jalo.springcloud.eureka.ribbon;
+package cn.net.jalo.springcloud.ribbon;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,5 +1,4 @@
-group = 'cn.net.jalo.springcloud.eureka'
-
+group = 'cn.net.jalo.springcloud'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
