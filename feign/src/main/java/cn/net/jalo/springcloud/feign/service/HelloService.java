@@ -9,6 +9,6 @@ import cn.net.jalo.springcloud.feign.service.impl.HelloServiceHystrixImpl;
 @FeignClient(value = "client", fallback = HelloServiceHystrixImpl.class)
 public interface HelloService {
 
-	@GetMapping("/client/{name}")
+	@GetMapping("/hello/{name}")
 	public String sayHelloFromClient(@PathVariable("name") String name);
 }

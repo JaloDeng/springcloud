@@ -1,2 +1,2 @@
 rootProject.name = 'springcloud'
-include 'server', 'client', 'ribbon', 'feign'
+include 'server', 'client', 'ribbon', 'feign', 'zuul'
