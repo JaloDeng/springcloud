@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import cn.net.jalo.springcloud.feign.service.impl.HelloServiceHystrixImpl;
 
-@FeignClient(value = "client", fallback = HelloServiceHystrixImpl.class)
+@FeignClient(value = "eureka-client", fallback = HelloServiceHystrixImpl.class)
 public interface HelloService {
 
 	@GetMapping("/hello/{name}")

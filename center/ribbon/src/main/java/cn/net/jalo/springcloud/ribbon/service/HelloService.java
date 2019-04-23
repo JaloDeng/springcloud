@@ -14,7 +14,7 @@ public class HelloService {
 	
 	@HystrixCommand(fallbackMethod = "helloError")
 	public String sayHello(String name) {
-		return restTemplate.getForObject("http://client/hello/" + name, String.class);
+		return restTemplate.getForObject("http://eureka-client/hello/" + name, String.class);
 	}
 	
 	public String helloError(String name) {
