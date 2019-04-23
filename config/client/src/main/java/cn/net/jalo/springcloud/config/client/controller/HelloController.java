@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class HelloController {
 
-	@Value("${foo}")
-	private String foo;
+	@Value("${config.file.name}")
+	private String name;
 	
-	@Value("${democonfigclient.message}")
-	private String message;
+	@Value("${config.profile}")
+	private String profile;
 	
 	@GetMapping("/properties")
 	public @ResponseBody String properties() {
-		return foo + " : " + message;
+		return name + " : " + profile;
 	}
 	
 }
