@@ -1,2 +1,3 @@
 rootProject.name = 'springcloud'
-include 'center'
+include 'center', 'center:server', 'center:client', 'center:ribbon', 'center:feign', 'center:zuul'
+include 'config', 'config:server'

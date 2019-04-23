@@ -1,2 +1,0 @@
-rootProject.name = 'center'
-include 'server', 'client', 'ribbon', 'feign', 'zuul'
